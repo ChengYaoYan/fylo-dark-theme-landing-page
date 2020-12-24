@@ -1,0 +1,25 @@
+/*
+=============
+Font
+=============
+*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+/*
+==============
+Variables
+==============
+*/
+:root {
+  --clr-dark-blue-1: hsl(217, 28%, 15%);
+  --clr-dark-blue-2: hsl(218, 28%, 13%);
+  --clr-dark-blue-3: hsl(216, 53%, 9%);
+  --clr-dark-blue-4: hsl(219, 30%, 18%);
+  --clr-cyan: hsl(176, 68%, 64%);
+  --clr-blue: hsl(198, 60%, 50%);
+  --clr-light-red: hsl(0, 100%, 63%);
+  --clr-white: hsl(0, 0%, 100%);
+  --ff-primary: 'Open Sans', sans-serif;
+  --ff-secondary: 'Raleway', sans-serif;
+}
