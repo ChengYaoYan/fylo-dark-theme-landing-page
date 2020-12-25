@@ -19,9 +19,9 @@
   </head>
   <body>
     <!-- header -->
-    <header class="home">
+    <header id="home" class="home">
       <!-- navbar -->
-      <nav class="nav">
+      <nav id="nav" class="nav">
         <div class="nav-center">
           <!-- nav header -->
           <div class="nav-header">
@@ -149,7 +149,7 @@
             <div>
               <a class="work-link" href="#">
                 <span>See how Fylo works</span>
-                <span><img src="./images/icon-arrow.svg" alt="arrow"/><span>
+                <span><i class="far fa-arrow-alt-circle-right"></i><span>
               </a>
             </div>
           </div>
@@ -207,23 +207,26 @@
       </div>
     </section>
     <!-- sign in-->
-    <section id="signin">
-      <div class="signin-container">
-        <div class="signin-title">
-          <h2>Get early access today</h2>
-          <p>
-            It only takes a minute to sign up and our free starter tier is
-            extremely generous. if your have any questions, our support team
-            would be happy to help you.
-          </p>
+    <section id="signin" class="signin">
+      <!-- 用于 desktop 的 position 布局-->
+      <div class="signin-position">
+        <div class="signin-container">
+          <div class="signin-title">
+            <h2>Get early access today</h2>
+            <p>
+              It only takes a minute to sign up and our free starter tier is
+              extremely generous. if your have any questions, our support team
+              would be happy to help you.
+            </p>
+          </div>
+          <div class="signin-with-email">
+            <form class="signin-form">
+              <input class="input-email" type="email" placeholder="email@example.com"/>
+              <button class="btn btn-submit">Get Started For Free</button>
+            </form>
+          </div>
         </div>
-        <div class="signin-with-email">
-          <form class="signin-form">
-            <input class="input-email" type="email" placeholder="email@example.com"/>
-            <button class="btn btn-submit">Get Started For Free</button>
-          </form>
-        </div>
-      </div>
+      <div>
     </section>
     <footer class="footer">
       <div class="footer-container">
@@ -234,30 +237,34 @@
           <div class="traditional-way">
             <div class="way-container">
               <div class="way-logo">
-                <img src="./images/icon-location.svg" alt="location" />
+                <i class="fas fa-map-marker-alt"></i>
               </div>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua
               </p>
             </div>
-            <div class="way-container">
-              <div class="way-logo">
-                <img src="./images/icon-phone.svg" alt="phone" />
+            <div>
+              <div class="way-container">
+                <div class="way-logo">
+                  <i class="fas fa-phone-alt"></i>
+                </div>
+                <p>+1-543-123-4567</p>
               </div>
-              <p>+1-543-123-4567</p>
-            </div>
-            <div class="way-container">
-              <div class="way-logo">
-                <img src="./images/icon-email.svg" alt="email" />
+              <div class="way-container">
+                <div class="way-logo">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <p>example@fylo.com</p>
               </div>
-              <p>example@fylo.com</p>
             </div>
           </div>
-          <div class="contact-links">
-            <div class="contact-links-container">
-              <h3 class="links-title">About Us</h3>
+          <div class="url-links">
+            <div class="url-links-container">
               <ul>
+                <li>
+                  <a href="#" class="links">about us</a>
+                </li>
                 <li>
                   <a href="#" class="links">jobs</a>
                 </li>
@@ -269,9 +276,11 @@
                 </li>
               </ul>
             </div>
-            <div class="contact-links-container">
-              <h3 class="links-title">Contact Us</h3>
+            <div class="url-links-container">
               <ul>
+                <li>
+                  <a href="#" class="links">contact us</a>
+                </li>
                 <li>
                   <a href="#" class="links">terms</a>
                 </li>
@@ -284,18 +293,18 @@
           <div class="social-media">
             <ul class="social-icons">
               <li>
-                <a class="social-media-link" href="https://www.facebook.com">
+                <a class="social-media-link" href="https://www.facebook.com" target="_blank">
                   <i class="fab fa-facebook"></i>
                 </a>
               </li>
               <li>
-                <a class="social-media-link" href="https://www.twitter.com">
+                <a class="social-media-link" href="https://www.twitter.com" target="_blank">
                   <i class="fab fa-twitter"></i>
                 </a>
               </li>
               </li>
               <li>
-                <a class="social-media-link" href="https://www.instagram.com">
+                <a class="social-media-link" href="https://www.instagram.com" target="_blank">
                   <i class="fab fa-instagram"></i>
                 </a>
               </li>
@@ -304,5 +313,11 @@
         </div>
       </div>
     </footer>
+    <!-- back to top button -->
+    <a href="#home" class="scroll-link top-link">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script type="text/javascript" src="./smooth.js"></script>
   </body>
 </html>

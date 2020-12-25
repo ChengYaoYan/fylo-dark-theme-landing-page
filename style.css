@@ -25,7 +25,7 @@ Variables
   --ff-primary: 'Raleway', sans-serif;
   --ff-secondary: 'Open Sans', sans-serif;
   --radius: 2rem;
-  --transition: all 0.25s linear;
+  --transition: all 0.5s linear;
 }
 
 /*
@@ -35,6 +35,7 @@ Global Styles
 */
 html {
   scroll-behavior: smooth;
+  height: 100%;
 }
 *,
 ::after,
@@ -43,12 +44,19 @@ html {
   padding: 0;
   box-sizing: border-box;
 }
+header,
+section,
+nav,
+footer {
+  display: block;
+}
 body {
   font-family: var(--ff-secondary);
   background: var(--clr-dark-blue-2);
   color: var(--clr-white);
   line-height: 1.5;
   font-size: 0.875rem;
+  height: 100%;
 }
 ul {
   list-style-type: none;
@@ -146,11 +154,19 @@ section {
 Styles
 ==============
 */
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--clr-dark-blue-1);
+  z-index: 1000;
+}
 .nav-center {
   width: 95vw;
   max-width: 1680px;
   margin: 0 auto;
-  padding: 2rem 0;
+  padding: 2rem 0 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -242,14 +258,19 @@ Styles
   border-bottom: 1px solid var(--clr-white);
 }
 @media screen and (min-width: 800px) {
+  .team-container {
+    width: 90vw;
+    max-width: 1080px;
+    margin: 0 auto 20rem;
+  }
   .team-introduction {
     display: flex;
-    justify-content: left;
+    justify-content: space-between;
     align-items: center;
   }
   .team-logo {
-    width: 30rem;
-    margin-right: 2rem;
+    width: 33rem;
+    margin: 0;
   }
   .team-paper {
     max-width: 500px;
@@ -332,8 +353,15 @@ Styles
   outline: none;
 }
 @media screen and (min-width: 800px) {
-  .signin-container {
-    padding: 3rem 3rem 2rem;
+  .signin {
+    position: relative;
+  }
+  .signin-position {
+    position: absolute;
+    bottom: -7rem;
+    width: 100%;
+    display: grid;
+    justify-items: center;
   }
   .signin-form {
     display: flex;
@@ -352,16 +380,16 @@ Styles
 .footer {
   background-color: var(--clr-dark-blue-3);
 }
+.footer-container {
+  width: 90vw;
+  max-width: 1400px;
+  margin: 0 auto 30rem;
+  padding-top: 2rem;
+}
 .footer .logo {
   width: 10rem;
   height: 3rem;
   margin-bottom: 2rem;
-}
-.footer-container {
-  width: 90vw;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding-top: 2rem;
 }
 @media screen and (min-width: 800px) {
   .footer-container {
@@ -372,26 +400,21 @@ Styles
   display: flex;
 }
 .way-logo {
-  width: 1.5rem;
-  height: 1.5rem;
-  margin-right: 2rem;
+  margin-right: 1rem;
 }
-.way-container:first-child .way-logo {
-  width: 2rem;
-  height: 2rem;
-}
-.contact-links-container {
+.url-links-container {
   margin-top: 3rem;
   margin-bottom: 2rem;
 }
-.links-title {
-  font-size: 1.2rem;
-  font-weight: 400;
-}
 .links {
   margin-bottom: 1rem;
-  color: var(--clr-white);
+  color: var(--clr-grey);
   font-size: 1rem;
+  text-transform: capitalize;
+  transition: var(--transition);
+}
+.links:hover {
+  color: var(--clr-white);
 }
 .social-media {
   margin-top: 5rem;
@@ -421,13 +444,30 @@ Styles
   }
   .way-container {
     max-width: 300px;
-    margin-right: 1rem;
+    margin-right: 5rem;
   }
-  .contact-links {
+  .url-links {
     display: flex;
     justify-content: space-between;
   }
-  .contact-links-container {
-    margin-right: 2rem;
+  .url-links-container {
+    margin-right: 5rem;
   }
+}
+
+.top-link {
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  display: none;
+  background-color: var(--clr-cyan);
+  border-radius: var(--radius);
+  color: var(--clr-white);
+}
+.top-link.show-link {
+  display: grid;
+  place-items: center;
 }
